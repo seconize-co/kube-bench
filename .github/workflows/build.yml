@@ -1,4 +1,3 @@
-
 name: sze-k8s-audit
 on:
   push:
