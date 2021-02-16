@@ -1,5 +1,5 @@
 FROM golang:1.15 AS build
-WORKDIR /go/src/github.com/aquasecurity/kube-bench/
+WORKDIR /go/src/github.com/seconize.co/kube-bench/
 COPY go.mod go.sum ./
 COPY main.go .
 COPY check/ check/
@@ -34,7 +34,7 @@ ARG VCS_REF
 LABEL org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.name="kube-bench" \
     org.label-schema.description="Run the CIS Kubernetes Benchmark tests" \
-    org.label-schema.url="https://github.com/aquasecurity/kube-bench" \
+    org.label-schema.url="https://github.com/seconize-co/kube-bench" \
     org.label-schema.vcs-ref=$VCS_REF \
-    org.label-schema.vcs-url="https://github.com/aquasecurity/kube-bench" \
+    org.label-schema.vcs-url="https://github.com/seconize-co/kube-bench" \
     org.label-schema.schema-version="1.0"
