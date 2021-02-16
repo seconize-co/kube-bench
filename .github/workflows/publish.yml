@@ -35,7 +35,6 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Docker Push to Azure Container Registry
         run: |
-          cd kube-bench
           sudo docker-compose up --build
           sudo apt install gnupg2 pass -y
           echo ${{ secrets.ACR_PWD }} | docker login --username seconize --password-stdin seconize.azurecr.io
