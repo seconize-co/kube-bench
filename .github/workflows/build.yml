@@ -1,17 +1,11 @@
-name: Build
+
+name: sze-k8s-audit
 on:
   push:
-    branches:
-      - main
-    paths-ignore:
-      - "*.md"
-      - "LICENSE"
-      - "NOTICE"
+    branches: [ master ]
   pull_request:
-    paths-ignore:
-      - "*.md"
-      - "LICENSE"
-      - "NOTICE"
+    branches: [ master ]
+
 jobs:
   build:
     name: Build
