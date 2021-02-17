@@ -59,7 +59,7 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
       - name: docker build
         run: |
-          sudo docker build https://github.com/seconize-co/kube-bench
+          sudo docker build kube-bench
       - name: Docker Push to Azure Container Registry
         run: |
           sudo apt install gnupg2 pass -y
