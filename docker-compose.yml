@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  kube-bench:
+    image: sze-k8s-audit:latest
+    volumes:sze-k8s-audit
+      - ./bin:/root/bin
+    env_file:
+      - config/build.env
+    build:
+      context: .
+      dockerfile: src/Dockerfile
+      args:
+        - VCS_REF
+        - VCS_URL
+        - VERSION
+        - BUILD_DATE
+        - VENDOR
+        - NAME
+        - DESCRIPTION
