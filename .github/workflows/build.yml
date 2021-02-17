@@ -38,3 +38,11 @@ jobs:
         with:
           version: v0.148.0
           args: release --snapshot --skip-publish --rm-dist
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@master
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_COLOR: '#3278BD'
+          SLACK_MESSAGE: 'Docker Image Push completed '
+          SLACK_TITLE: Docker Image Build
+          SLACK_USERNAME: seconize
