@@ -46,7 +46,7 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_COLOR: '#3278BD'
           SLACK_MESSAGE: 'Docker Image Push completed '
-          SLACK_TITLE: Sensor Build
+          SLACK_TITLE: kube-bench build
           SLACK_USERNAME: seconize
       - name: Get version
         id: get_version
